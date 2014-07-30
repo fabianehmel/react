@@ -1,0 +1,236 @@
+/* Avoid swipe gesture selecting part of the app */
+* {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  margin-top: -40px;
+  width: 640px;
+  height: 960px;
+  background: #444;
+  /* make sure the body cannot be scrolled */
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+/*#map {
+  width: 320px;
+  height: 480px;
+  position: fixed;
+  zoom: 2;
+} */ 
+
+#map {
+  width: 640px;
+  height: 960px;
+  position: fixed;
+  zoom: 1;
+}  
+
+img {
+  position: absolute;
+}
+
+#menu {
+	background-image: url(../screens/reAct_mainmenu_base.png);
+	float: left;
+	position: absolute;
+	z-index: 20002;
+	height: 960px;
+	overflow: hidden;
+	padding-top: 160px;
+	left: -440px;
+}
+
+#menu>ul, #menu>ul>li, #menu>ul>li>ul, #menu>ul>li>ul>li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+#menu img {
+	position: relative;
+  width: 460px;
+  float: left;
+}
+
+#screen1 {
+  top: 0;
+  left: 0;
+}
+
+#menu-button {
+  top: 80px;
+  left: 0px;
+  z-index: 20001;
+}
+
+#back-button {
+  top: 64px;
+  left: 36px;
+  z-index: 2000;
+  visibility: hidden;
+}
+
+#menu-right {
+  top: 0;
+  left: -640px;
+}
+
+#menu-right-back {
+  top: 0;
+  left: -640px;
+}
+
+.form {
+	position: absolute;
+ 	top: 960px;
+  left: 0;
+	width: 640px;
+	height: 740px;
+  z-index: 20001;
+}
+
+.form-body {
+	position: absolute;
+	overflow: scroll;
+	top: 80px;
+	height: 560px;
+  background: #fff;
+}
+
+.form-body img {
+	position: relative;
+	float: left;
+}
+
+.form-head {
+	top: 0;
+}
+
+#ui {
+  z-index: 10000;
+}
+
+#nav {
+  z-index: 10001;
+}
+
+.leaflet-control-container {
+  display: none;
+}
+
+#news-list {
+  position: absolute;
+  top: 960px;
+  background: rgba(255,255,255,0.8);
+  height: 960px;
+}
+
+.news-body>ul, .news-body>ul>li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+#news-list img {
+  position: relative;
+  float: left;
+}
+
+.news-body>ul img {
+  padding-bottom: 4px;
+}
+
+.news-header {
+  border-bottom: 4px solid #666;
+}
+
+.news-body {
+  height: 760px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 200px;
+  width: 640px;
+}
+
+#news-list .arrow_right {
+  position: absolute;
+  left: 0; 
+}
+
+#news-list .arrow_left {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+#news-detail {
+  position: absolute;
+  top: 200px;
+  background: rgba(255,255,255,0.8);
+  height: 760px;
+  left: 640px;
+  width: 562px;
+}
+
+
+.react-popup {
+  width: 400px;
+  height: 350px;
+}
+
+.react-popup>.leaflet-popup-content-wrapper, .react-popup>.leaflet-popup-tip {
+  background: none;
+  box-shadow: none;
+}
+
+.react-popup>.leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: none;
+  width: 400px;
+}
+
+.react-popup>.leaflet-popup-content-wrapper>.leaflet-popup-content {
+  margin: 0;
+  line-height: 1;
+  width: 400px;
+}
+
+.react-popup>.leaflet-popup-close-button {
+  display: none;
+}
+
+.react-popup>.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup-content {
+  font-size: 24px;
+}
+
+
+
+.detail {
+  position: absolute;
+  top: 45px;
+  opacity: 1;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<!-- Sets initial viewport load and disables zooming  -->
+		<meta name="viewport" content="width=640, initial-scale=0.5, maximum-scale=1, user-scalable=no">
+
+		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="css/react.css" rel="stylesheet">
+		<link rel="apple-touch-icon" href="ios/icon.png" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<script src="leaflet/leaflet.js"></script>
+
+	    <title>reAct</title>
+	</head>
+
+	<body>
+
+	    <div id="map"></div>
+
+	    <div id="ui">
+	    	<img id="menu-button" src="screens/reAct_mainmenu_button_open.png">
+		    <div id="menu">
+		    	<ul>
+		    		<li><img id="news" src="screens/wording/news.png"></li>
+		        	<li><img id="ichsuchehilfe" src="screens/wording/ichsuchehilfe.png">
+		        		<ul>
+		        			<li><img id="ichsuchehilfe-suchen" src="screens/wording/ichsuchehilfe/suchen.png"></li>
+		        			<li><img id="ichsuchehilfe-erstellen" src="screens/wording/ichsuchehilfe/erstellen.png"></li>
+		        		</ul>
+		        	</li>
+		        	<li><img id="ichbietehilfe" src="screens/wording/ichbietehilfe.png">
+		        		<ul>
+		        			<li><img id="ichbietehilfe-melden" src="screens/wording/ichbietehilfe/melden.png"></li>
+		        			<li><img id="ichbietehilfe-einstellen" src="screens/wording/ichbietehilfe/einstellen.png"></li>
+		        		</ul>
+		        	</li>
+		        	<li><img id="profil" src="screens/wording/profil.png"></li>
+		        </ul>
+		    </div>
+
+	        <div class="form" id="form-ichsuchehilfe-suchen">
+	        	<img class="form-head" src="screens/forms/search/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/search/body.png">
+	        		<img src="screens/forms/search/foot.png">
+	        	</div>
+	        </div>
+
+	        <div class="form" id="form-ichsuchehilfe-erstellen">
+	        	<img class="form-head" src="screens/forms/request/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/request/body.png">
+	        		<img src="screens/forms/request/foot.png">
+	        	</div>
+	        </div>
+
+	        <div class="form" id="form-ichbietehilfe-einstellen">
+	        	<img class="form-head" src="screens/forms/offer/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/offer/body.png">
+	        		<img src="screens/forms/offer/foot.png">
+	        	</div>
+	        </div>
+
+	        <div class="hotbox" id="hotbox-ich-suche-hilfe"></div>
+	        <div class="hotbox" id="hotbox-hilfsangebote-durchsuchen"></div>
+	        <div class="hotbox" id="hotbox-hilferuf-erstellen"></div>
+	    </div>
+
+	</body>
+
+	<script src="js/react.js"></script>
+
+</html>

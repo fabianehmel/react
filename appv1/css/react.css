@@ -1,0 +1,149 @@
+/* Avoid swipe gesture selecting part of the app */
+* {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  margin-top: -40px;
+  width: 640px;
+  height: 960px;
+  background: #444;
+  /* make sure the body cannot be scrolled */
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+/*#map {
+  width: 320px;
+  height: 480px;
+  position: fixed;
+  zoom: 2;
+} */ 
+
+#map {
+  width: 320px;
+  height: 480px;
+  position: fixed;
+  zoom: 2;
+}  
+
+img {
+  position: absolute;
+}
+
+#menu {
+	background-image: url(../screens/reAct_mainmenu_base.png);
+	float: left;
+	position: absolute;
+	z-index: 20000;
+	height: 960px;
+	overflow: hidden;
+	padding-top: 160px;
+	left: -440px;
+  opacity: 0.95;
+}
+
+#menu>ul, #menu>ul>li, #menu>ul>li>ul, #menu>ul>li>ul>li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+#menu img {
+	position: relative;
+}
+
+#screen1 {
+  top: 0;
+  left: 0;
+}
+
+#menu-button {
+  top: 80px;
+  left: 0px;
+  z-index: 20001;
+}
+
+#back-button {
+  top: 64px;
+  left: 36px;
+  z-index: 2000;
+  visibility: hidden;
+}
+
+#menu-right {
+  top: 0;
+  left: -640px;
+}
+
+#menu-right-back {
+  top: 0;
+  left: -640px;
+}
+
+
+
+.hotbox {
+  position: absolute;
+  right: 0;
+  display: none;
+  height: 128px;
+}
+
+#hotbox-ich-suche-hilfe {
+  width: 360px;
+  top: 292px;
+}
+
+#hotbox-hilfsangebote-durchsuchen {
+  width: 606px;
+  top: 164px;
+}
+
+#hotbox-hilferuf-erstellen {
+  width: 410px;
+  top: 292px;
+}
+
+.form {
+	position: absolute;
+ 	top: 960px;
+  left: 0;
+	width: 640px;
+	height: 740px;
+  z-index: 20001;
+}
+
+.form-body {
+	position: absolute;
+	overflow: scroll;
+	top: 80px;
+	height: 680px;
+}
+
+.form-body img {
+	position: relative;
+	float: left;
+}
+
+.form-head {
+	top: 0;
+}
+
+#ui {
+  z-index: 10000;
+}
+
+.leaflet-control-container {
+  display: none;
+}

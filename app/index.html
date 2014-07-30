@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<!-- Sets initial viewport load and disables zooming  -->
+		<meta name="viewport" content="width=640, initial-scale=0.5, maximum-scale=1, user-scalable=no">
+
+		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="css/react.css" rel="stylesheet">
+		<link rel="apple-touch-icon" href="ios/icon.png" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<script src="leaflet/leaflet.js"></script>
+
+	    <title>reAct</title>
+	</head>
+
+	<body>
+
+	    <div id="map"></div>
+
+
+
+	    <div id="nav">
+	    	<img id="menu-button" src="screens/reAct_mainmenu_button_open.png">
+		    <div id="menu">
+		    	<ul>
+		    		<li><img id="news" src="screens/wording/news_alarm.png"></li>
+		        	<li><img id="ichbietehilfe-melden" src="screens/wording/helferwerden.png"></li>
+		        	<li><img id="ichsuchehilfe-erstellen" src="screens/wording/hilfsgesucherstellen.png"></li>
+		       		<li><img id="ichsuchehilfe-suchen" src="screens/wording/hilfefinden.png"></li>
+		        	<li><img id="ichbietehilfe-einstellen" src="screens/wording/hilfsangeboterstellen.png"></li>
+		        	<li><img id="profil" src="screens/wording/profile.png"></li>
+		        </ul>
+		    </div>
+		</div>
+
+
+		<div id="ui">
+
+	        <div class="form" id="form-ichsuchehilfe-suchen">
+	        	<img class="form-head" src="screens/forms/search/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/search/body.png">
+	        		<img src="screens/forms/search/foot.png">
+	        	</div>
+	        </div>
+
+	        <div class="form" id="form-ichsuchehilfe-erstellen">
+	        	<img class="form-head" src="screens/forms/request/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/request/body.png">
+	        		<img src="screens/forms/request/foot.png">
+	        	</div>
+	        </div>
+
+	        <div class="form" id="form-ichbietehilfe-einstellen">
+	        	<img class="form-head" src="screens/forms/offer/head.png">
+	        	<div class="form-body">
+	        		<img src="screens/forms/offer/body.png">
+	        		<img id="form-ichbietehilfe-einstellen-foot" src="screens/forms/offer/foot.png">
+	        	</div>
+	        </div>
+
+	        <div id="news-list">
+	        	<img class="news-header" src="screens/news/header.png">
+	        	<div class="news-body">
+		        	<ul>
+		        		<li><img class="news-entry alert" id="news-entry1" src="screens/news/news1.png"><img id="arrow_right1" class="arrow_right" src="screens/news/arrow_right.png"><img class="arrow_left" src="screens/news/arrow_left.png"></li>
+		        		<li><img class="news-entry" id="news-entry2" src="screens/news/news2.png"><img class="arrow_right" src="screens/news/arrow_right.png"></li>
+		        		<li><img class="news-entry" id="news-entry3" src="screens/news/news3.png"><img class="arrow_right" src="screens/news/arrow_right.png"></li>
+		        		<li><img class="news-entry" id="news-entry4" src="screens/news/news4.png"><img class="arrow_right" src="screens/news/arrow_right.png"></li>
+		        		<li><img class="news-entry" id="news-entry5" src="screens/news/news5.png"><img class="arrow_right" src="screens/news/arrow_right.png"></li>
+		        		<li><img class="news-entry" id="news-entry6" src="screens/news/news6.png"><img class="arrow_right" src="screens/news/arrow_right.png"></li>
+		        	</ul>
+		        </div>
+	        	<div id="news-detail">
+	        		<img src="screens/news/news1_detail.png">
+	        	</div>
+	        </div>
+
+	        <div><img id="detail-museum" class="detail" src="screens/details/museum.png"></div>
+	        <div><img id="detail-tierheim" class="detail" src="screens/details/tierheim.png"></div>
+
+
+	    </div>
+
+	</body>
+
+	<script src="js/react.js"></script>
+
+</html>
