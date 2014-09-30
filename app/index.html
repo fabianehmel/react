@@ -10,6 +10,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+
 		<link href="css/react.css" rel="stylesheet">
 		<link rel="apple-touch-icon" href="ios/icon.png" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -17,6 +19,8 @@
 		<!-- Leaflet -->
 		<link rel="stylesheet" href="leaflet/leaflet.css" />
 		<script src="leaflet/leaflet.js"></script>
+
+
 
 	    <title>reAct</title>
 	</head>
@@ -42,31 +46,91 @@
 		</div>
 
 
+
 		<div id="ui">
 
-	        <div class="form" id="form-ichsuchehilfe-suchen">
-	        	<img class="form-head" src="screens/forms/search/head.png">
-	        	<div class="form-body">
-	        		<img src="screens/forms/search/body.png">
-	        		<img src="screens/forms/search/foot.png">
+			<div class= 'form' id="form-ichsuchehilfe-suchen">
+	        	<div class='form-head'>
+	        		<p>Hilfsangebote durchsuchen</p>
+	        	</div>
+	        	<div class="form-body">        		
+	        		<div class="form-body-inputBlock"> 
+	        			<p>Wo?</p>
+	        			<input type='text' name='form-ichsuchehilfe-suchen_wo' placeholder='Adresse'>
+	        		</div>
+		        	<div class="form-body-inputBlock">
+		        		<p>Was?</p>
+		        		<input type='text' name='form-ichsuchehilfe-suchen_was' placeholder='Was suchst du'>
+		        	</div>	
+		        	<button class = 'formBtn' style='margin-left:-30px; margin-top:20px'> 
+        				<p>Suchen</p> 
+        				<img src='screens/icon_search.png'>
+	        		</button>
 	        	</div>
 	        </div>
 
-	        <div class="form" id="form-ichsuchehilfe-erstellen">
-	        	<img class="form-head" src="screens/forms/request/head.png">
+
+
+	        <div class= 'form' id="form-ichsuchehilfe-erstellen">
+	        	<div class='form-head'>
+	        		<p>Hilfsgesuch erstellen</p>
+	        	</div>
 	        	<div class="form-body">
-	        		<img src="screens/forms/request/body.png">
-	        		<img src="screens/forms/request/foot.png">
+	        		<div class="form-body-inputBlock">
+	        			<p>Wo?</p>
+	        			<input type='text' name='form-ichsuchehilfe-suchen_wo' placeholder='Adresse'>
+	        		</div>
+	        		<div class="form-body-inputBlock">
+	        			<p>Was?</p>
+	        			<input type='text' name='form-ichsuchehilfe-suchen_Titel' placeholder='Titel'>
+	        			<textarea class='formTextarea' name='form-ichsuchehilfe-suchen_Beschreibung' placeholder='Beschreibung' cols='10' rows='3'></textarea>
+	        		</div>
+	        		<div class="form-body-inputBlock">
+	        			<p>Werden Helfer benoetigt?</p>	       			
+	        			<img class='formIcon' src='screens/marker/icon_helperW.png'>
+	        			<button class='addBtn' id='addBtn-hRequest-helperMinus'><p>-</p></button>
+	        			<textarea class='amountTextarea' cols='1' rows='1' readonly ></textarea>
+						<button class='addBtn' id='addBtn-hRequest-helperPlus'><p>+</p></button>
+	        		</div>
+	        		<div class="form-body-inputBlock">
+	        			<p>Material oder Technik?</p>
+	        			<textarea class='formTextarea' cols='10' rows='2' placeholder='Gueter, Dienstleistungen etc.'></textarea>
+	        			<div class='rightalign'>
+	        				<button class='addBtn' id='addBtn-hRequest-MaterialAddField' style='margin:-8px 34px 10px 0px'; ><p>+</p></button>
+	        			</div>
+	        	    </div>
+	        	   	<button class ='formBtn' style='margin-left:-30px; margin-top:20px;'> 
+        				<p>Hilferuf erstellen</p> 
+        				<img src='screens/icons_requestpin.png'>
+	        		</button>
 	        	</div>
 	        </div>
 
-	        <div class="form" id="form-ichbietehilfe-einstellen">
-	        	<img class="form-head" src="screens/forms/offer/head.png">
+
+	        <div class= 'form' id="form-ichbietehilfe-einstellen">
+	        	<div class='form-head'>
+	        		<p>Hilfsangebot einstellen</p>
+	        	</div>
 	        	<div class="form-body">
-	        		<img src="screens/forms/offer/body.png">
-	        		<img id="form-ichbietehilfe-einstellen-foot" src="screens/forms/offer/foot.png">
+	        		<div class="form-body-inputBlock">
+	        			<p>Wo?</p>
+	        			<input type='text' name='form-ichsuchehilfe-suchen_wo' placeholder='Adresse'>
+	        		</div>
+	        		<div class="form-body-inputBlock">
+	        			<p>Angebot?</p>
+	        			<textarea class='formTextarea' cols='10' rows='2' placeholder='Gueter, Dienstleistungen etc.'></textarea>
+	        			<div class='rightalign'>
+	        				<button class='addBtn' id='addBtn-hRequest-MaterialAddField' style='margin:-8px 34px 10px 0px'; ><p>+</p></button>
+	        			</div>
+	        	    </div>
+	        	   	<button class ='formBtn' style='margin-left:-30px; margin-top:20px;'> 
+        				<p>Hilfsangebot erstellen</p> 
+        				<img src='screens/icons_offerpin.png'>
+	        		</button>
 	        	</div>
 	        </div>
+
+
 
 	        <div id="news-list">
 	        	<img class="news-header" src="screens/news/header.png">

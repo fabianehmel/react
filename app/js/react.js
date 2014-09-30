@@ -10,6 +10,8 @@
     var hilferuf_toggled = false;
     var profil_toggled = false;
 
+    var amountBtn_hRequest_helper = 0;
+
     var green = "#69a74b";
     var orange = "#e69038";
     var grey = "#888";
@@ -62,7 +64,7 @@
     $( "#form-ichsuchehilfe-erstellen > .form-head").click(function() {
         var current_value = parseFloat($(this).parent().css('top'));
         if (current_value == 320) {
-            $(this).parent().animate({ "top": 880 });
+            $(this).parent().animate({ "top": 804 });
             $( "#map" ).animate({ "height": 960 });
             setTimeout(function(){ map.invalidateSize()}, 400);
         } else { $(this).parent().animate({ "top": 320 }); }
@@ -71,7 +73,7 @@
     $( "#form-ichsuchehilfe-suchen > .form-head").click(function() {
         var current_value = parseFloat($(this).parent().css('top'));
         if (current_value == 400) {
-            $(this).parent().animate({ "top": 880 });
+            $(this).parent().animate({ "top": 804 });
             $( "#map" ).animate({ "height": 960 });
             setTimeout(function(){ map.invalidateSize()}, 400);
         } else { $(this).parent().animate({ "top": 400 }); }
@@ -80,7 +82,7 @@
     $( "#form-ichbietehilfe-einstellen > .form-head").click(function() {
         var current_value = parseFloat($(this).parent().css('top'));
         if (current_value == 320) {
-            $(this).parent().animate({ "top": 880 });
+            $(this).parent().animate({ "top": 804 });
             $( "#map" ).animate({ "height": 960 });
             setTimeout(function(){ map.invalidateSize()}, 400);
         } else {
@@ -96,6 +98,13 @@
 // MENU ITEMS
 
     $( "#ichsuchehilfe-suchen" ).click(function() {
+        var formHeight = $('#form-ichsuchehilfe-suchen').height();
+        var formPos = 320;
+
+//        if (formHeight<640) {
+//                formPos=960-formHeight;
+//        }
+
 
         if (angebotsuchen_toggled == false) {
             
@@ -104,7 +113,7 @@
             angebotsuchen_toggled = true;
 
             toggle_menu();
-            $( "#form-ichsuchehilfe-suchen" ).animate({ "top": 400 });
+            $( "#form-ichsuchehilfe-suchen" ).animate({ "top": formPos });
             bottom_menu_toggled = true;
             $( "#menu-button" ).css({ "borderLeft": "8px solid "+green });
             map.addLayer(offers);
@@ -115,6 +124,7 @@
 
     $( "#ichsuchehilfe-erstellen" ).click(function() {
 
+
         if (hilferuf_toggled == false) {
             
             deselectMenuItem();
@@ -122,7 +132,7 @@
             hilferuf_toggled = true;
 
             toggle_menu();
-            $( "#form-ichsuchehilfe-erstellen" ).animate({ "top": 320 });
+            $( "#form-ichsuchehilfe-erstellen" ).animate({ "top": 320});
             bottom_menu_toggled = true;
 
         } else { deselectMenuItem(); }
@@ -289,6 +299,21 @@
     }
 
 
+// FORM INTERACTIVE ELEMENTS
+
+// BUG - FABIAN: ich habe hier versucht die Logik der + und - buttons für die Anzahl an Helfer zu scripten. Ich denke aber, dass ich hier die if else logik noch nicht so ganz richtig genutzt habe (syntax oder logikfehler?)
+
+// $("#addBtn-hRequest-helperMinus").click(function(){
+//     if (addBtn_hRequest_helper=0) {null};
+//     else{ addBtn_hRequest_helper=-1;
+//     }
+// });
+
+// $("#addBtn-hRequest-helperPlus").click(function(){
+//     //if (addBtn_hRequest_helper<20) {};
+//     //else{ addBtn_hRequest_helper=+1;
+//     //}
+// });
 
 
 // MAP
